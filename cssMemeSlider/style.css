@@ -14,50 +14,57 @@ h1 {
     width: 42.5em;
     margin: 3.125em auto;
     box-shadow: 0 0.625em 1.25em 0.313em rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0.625em);
   }
   .slider input[name="switch"] {
     display: none;
   }
   .switch {
     text-align: end;
-    margin-top: 20px;
-    padding-bottom: 20px;
-    margin-right: 10px;
+    margin-top: 1.5em;
+    padding-bottom: 1.25em;
+    margin-right: 0.625em;
     display: flex;
     flex-direction: row;
     overflow: hidden;
   }
-  .switch label {
+  .switch span {
     display: inline-block;
     width: 0.5em;
     height: 0.5em;
     cursor: pointer;
-    margin: 0 0.188em;
+    margin: 0.5em 0.188em;
     border-radius: 50%;
-    border: 0.25em solid #7bacff;
-    background-color: #7bacff;
+    border: 0.1em solid #ffffff;
+    background-color: #182f5d;
   }
-  #btn1:checked~ .underslides > .switch label[for="btn1"] {
+  .switch label {
+    height: 1.7em;
+    width: 1.1em;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+  }
+  #btn1:checked~ .underslides > .switch > label[for="btn1"] > span {
     background-color: #ffffff;
   }
-  #btn2:checked~ .underslides > .switch label[for="btn2"] {
+  #btn2:checked~ .underslides > .switch > label[for="btn2"] > span {
     background-color: #ffffff;
   }
-  #btn3:checked~ .underslides > .switch label[for="btn3"] {
+  #btn3:checked~ .underslides > .switch > label[for="btn3"] > span {
     background-color: #ffffff;
   }
-  #btn4:checked~ .underslides > .switch label[for="btn4"] {
+  #btn4:checked~ .underslides > .switch > label[for="btn4"] > span {
     background-color: #ffffff;
   }
-  #btn5:checked~ .underslides > .switch label[for="btn5"] {
+  #btn5:checked~ .underslides > .switch > label[for="btn5"] > span {
     background-color: #ffffff;
   }
   .slider-inner {
     overflow: hidden;
     height: 21.25em;
     width: 42.5em;
-    padding-top: 10px;
+    padding-top: 0.625em;
   }
   .slides {
     display: flex;
@@ -105,29 +112,38 @@ h1 {
     align-items: center;
   }
 
-  label:hover {
+  span:hover {
     border-color: #ffffff;
     background-color: #ffffff;
     transition: all 0.5s;
   }
+  label:hover {
+    cursor: pointer;
+    transition: all 0.5s;
+  }
 
   #btn1:checked ~ .underslides > .description > .text {
-    transform: translateY(-17px);
+    transform: translateY(-1.063em);
     transition: transform 0.5s;
   }
   #btn2:checked ~ .underslides > .description > .text {
-    transform: translateY(-55px);
+    transform: translateY(-3.438em);
     transition: transform 0.5s;
   }
   #btn3:checked ~ .underslides > .description > .text {
-    transform: translateY(-93px);
+    transform: translateY(-5.813em);
     transition: transform 0.5s;
   }
   #btn4:checked ~ .underslides > .description > .text {
-    transform: translateY(-131px);
+    transform: translateY(-8.188em);
     transition: transform 0.5s;
   }
   #btn5:checked ~ .underslides > .description > .text {
-    transform: translateY(-169px);
+    transform: translateY(-10.563em);
     transition: transform 0.5s;
+  }
+  .hovering {
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
   }
