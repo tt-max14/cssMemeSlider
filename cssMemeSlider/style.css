@@ -7,6 +7,8 @@ h1 {
   font-size: 3em;
   text-align: center;
   color: aliceblue;
+  margin-top: 0.5rem;
+  margin-bottom: -2rem;
 }
   .slider {
     width: 42.5em;
@@ -22,6 +24,9 @@ h1 {
     margin-top: 20px;
     padding-bottom: 20px;
     margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
   }
   .switch label {
     display: inline-block;
@@ -29,25 +34,24 @@ h1 {
     height: 0.5em;
     cursor: pointer;
     margin: 0 0.188em;
-    box-shadow: 0 0 0.125em 0 rgba(0, 0, 0, .8);
     border-radius: 50%;
-    border: 0.313em solid #2f363c;
-    background-color: #738290;
+    border: 0.25em solid #7bacff;
+    background-color: #7bacff;
   }
-  #btn1:checked~.switch label[for="btn1"] {
-    background-color: white;
+  #btn1:checked~ .underslides > .switch label[for="btn1"] {
+    background-color: #ffffff;
   }
-  #btn2:checked~.switch label[for="btn2"] {
-    background-color: white;
+  #btn2:checked~ .underslides > .switch label[for="btn2"] {
+    background-color: #ffffff;
   }
-  #btn3:checked~.switch label[for="btn3"] {
-    background-color: white;
+  #btn3:checked~ .underslides > .switch label[for="btn3"] {
+    background-color: #ffffff;
   }
-  #btn4:checked~.switch label[for="btn4"] {
-    background-color: white;
+  #btn4:checked~ .underslides > .switch label[for="btn4"] {
+    background-color: #ffffff;
   }
-  #btn5:checked~.switch label[for="btn5"] {
-    background-color: white;
+  #btn5:checked~ .underslides > .switch label[for="btn5"] {
+    background-color: #ffffff;
   }
   .slider-inner {
     overflow: hidden;
@@ -85,6 +89,45 @@ h1 {
   }
   .text {
     font-family: 'Nunito', sans-serif;
+    font-size: 1em;
     color: aliceblue;
-    margin-right: 28em;
+    width: 10em;
+    text-align: start;
+    margin-left: 1em;
+  }
+  .description {
+    height: 1.2em;
+    overflow: hidden;
+  }
+  .underslides {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  label:hover {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    transition: all 0.5s;
+  }
+
+  #btn1:checked ~ .underslides > .description > .text {
+    transform: translateY(-17px);
+    transition: transform 0.5s;
+  }
+  #btn2:checked ~ .underslides > .description > .text {
+    transform: translateY(-55px);
+    transition: transform 0.5s;
+  }
+  #btn3:checked ~ .underslides > .description > .text {
+    transform: translateY(-93px);
+    transition: transform 0.5s;
+  }
+  #btn4:checked ~ .underslides > .description > .text {
+    transform: translateY(-131px);
+    transition: transform 0.5s;
+  }
+  #btn5:checked ~ .underslides > .description > .text {
+    transform: translateY(-169px);
+    transition: transform 0.5s;
   }
