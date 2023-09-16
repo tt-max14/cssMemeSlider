@@ -1,0 +1,90 @@
+body {
+    background-image: url(assets/Cloudy.svg);
+    background-size: cover;
+  }
+h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 3em;
+  text-align: center;
+  color: aliceblue;
+}
+  .slider {
+    width: 42.5em;
+    margin: 3.125em auto;
+    box-shadow: 0 0.625em 1.25em 0.313em rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+  }
+  .slider input[name="switch"] {
+    display: none;
+  }
+  .switch {
+    text-align: end;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+  }
+  .switch label {
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    cursor: pointer;
+    margin: 0 0.188em;
+    box-shadow: 0 0 0.125em 0 rgba(0, 0, 0, .8);
+    border-radius: 50%;
+    border: 0.313em solid #2f363c;
+    background-color: #738290;
+  }
+  #btn1:checked~.switch label[for="btn1"] {
+    background-color: white;
+  }
+  #btn2:checked~.switch label[for="btn2"] {
+    background-color: white;
+  }
+  #btn3:checked~.switch label[for="btn3"] {
+    background-color: white;
+  }
+  #btn4:checked~.switch label[for="btn4"] {
+    background-color: white;
+  }
+  #btn5:checked~.switch label[for="btn5"] {
+    background-color: white;
+  }
+  .slider-inner {
+    overflow: hidden;
+    height: 21.25em;
+    width: 42.5em;
+    padding-top: 10px;
+  }
+  .slides {
+    display: flex;
+    gap: 21.875em;
+    margin-left: 13em;
+    transition: all 0.5s;
+  }
+  .slides img {
+    width: 42.5em;
+    height: 21.25em;
+    float: left;
+    object-fit: contain;
+    border-radius: 5%;
+  }
+  #btn1:checked~slider-inner slides {
+    transform: translate(0);
+  }
+  #btn2:checked~.slider-inner .slides {
+    transform: translate(-51.25em);
+  }
+  #btn3:checked~.slider-inner .slides {
+    transform: translate(-102.813em);
+  }
+  #btn4:checked~.slider-inner .slides {
+    transform: translate(-145.938em);
+  }
+  #btn5:checked~.slider-inner .slides {
+    transform: translate(-200em);
+  }
+  .text {
+    font-family: 'Nunito', sans-serif;
+    color: aliceblue;
+    margin-right: 28em;
+  }
