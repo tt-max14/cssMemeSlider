@@ -166,6 +166,24 @@ h1 {
       max-width: 23em;
       border-radius: 5%;
     }
+    .slides img:nth-child(2) {
+      max-height: 11.063em;
+      margin-top: 6em;
+      margin-left: 0.125em;
+    }
+
+    .slides img:nth-child(4) {
+      max-height: 18em;
+      margin-top: 2.5em;
+      margin-left: 0.1em;
+    }
+
+    .slides img:nth-child(5) {
+      max-height: 13em;
+      margin-top: 5em;
+      margin-left: 0.1em;
+    }
+
     .underslides {
       flex-direction: column;
     }
