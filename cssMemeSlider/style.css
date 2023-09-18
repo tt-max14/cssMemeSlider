@@ -1,0 +1,241 @@
+body {
+    background-image: url(assets/Cloudy.svg);
+    background-size: cover;
+    margin: 0;
+  }
+h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 3em;
+  text-align: center;
+  color: aliceblue;
+  margin-top: 0.5rem;
+  margin-bottom: -2rem;
+}
+  .slider {
+    width: 42.5em;
+    margin: 3.125em auto;
+    box-shadow: 0 0.625em 1.25em 0.313em rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(0.625em);
+  }
+  .slider input[name="switch"] {
+    display: none;
+  }
+  .switch {
+    text-align: end;
+    margin-top: 1.5em;
+    padding-bottom: 1.25em;
+    margin-right: 0.625em;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+  .switch span {
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    cursor: pointer;
+    margin: 0.5em 0.188em;
+    border-radius: 50%;
+    border: 0.1em solid #ffffff;
+    background-color: #182f5d;
+  }
+  .switch label {
+    height: 1.7em;
+    width: 1.1em;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+  }
+  #btn1:checked~ .underslides > .switch > label[for="btn1"] > span {
+    background-color: #ffffff;
+  }
+  #btn2:checked~ .underslides > .switch > label[for="btn2"] > span {
+    background-color: #ffffff;
+  }
+  #btn3:checked~ .underslides > .switch > label[for="btn3"] > span {
+    background-color: #ffffff;
+  }
+  #btn4:checked~ .underslides > .switch > label[for="btn4"] > span {
+    background-color: #ffffff;
+  }
+  #btn5:checked~ .underslides > .switch > label[for="btn5"] > span {
+    background-color: #ffffff;
+  }
+  .slider-inner {
+    overflow: hidden;
+    height: 21.25em;
+    width: 42.5em;
+    padding-top: 0.625em;
+  }
+  .slides {
+    display: flex;
+    gap: 21.875em;
+    margin-left: 13em;
+    transition: all 0.5s;
+  }
+  .slides img, .slides png {
+    width: 42.5em;
+    height: 21.25em;
+    object-fit: contain;
+    border-radius: 5%;
+  }
+  #btn1:checked~slider-inner slides {
+    transform: translate(0);
+  }
+  #btn2:checked~.slider-inner .slides {
+    transform: translate(-51.25em);
+  }
+  #btn3:checked~.slider-inner .slides {
+    transform: translate(-102.813em);
+  }
+  #btn4:checked~.slider-inner .slides {
+    transform: translate(-145.938em);
+  }
+  #btn5:checked~.slider-inner .slides {
+    transform: translate(-200em);
+  }
+  .text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    color: aliceblue;
+    width: 10em;
+    text-align: start;
+    margin-left: 1em;
+  }
+  .description {
+    height: 1.2em;
+    overflow: hidden;
+  }
+  .underslides {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  span:hover {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    transition: all 0.5s;
+  }
+  label:hover {
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  #btn1:checked ~ .underslides > .description > .text {
+    transform: translateY(-1.063em);
+    transition: transform 0.5s;
+  }
+  #btn2:checked ~ .underslides > .description > .text {
+    transform: translateY(-3.438em);
+    transition: transform 0.5s;
+  }
+  #btn3:checked ~ .underslides > .description > .text {
+    transform: translateY(-5.813em);
+    transition: transform 0.5s;
+  }
+  #btn4:checked ~ .underslides > .description > .text {
+    transform: translateY(-8.188em);
+    transition: transform 0.5s;
+  }
+  #btn5:checked ~ .underslides > .description > .text {
+    transform: translateY(-10.563em);
+    transition: transform 0.5s;
+  }
+  .hovering {
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+  }
+  #btn1:checked:hover~ .underslides > .switch > label[for="btn1"] > span {
+    background-color: #356cb1;
+    transition: all 0.5s;
+  }
+  #btn2:checked:hover~ .underslides > .switch > label[for="btn2"] > span {
+    background-color: #356cb1;
+    transition: all 0.5s;
+  }
+  #btn3:checked:hover~ .underslides > .switch > label[for="btn3"] > span {
+    background-color: #356cb1;
+    transition: all 0.5s;
+  }
+  #btn4:checked:hover~ .underslides > .switch > label[for="btn4"] > span {
+    background-color: #356cb1;
+    transition: all 0.5s;
+  }
+  #btn5:checked:hover~ .underslides > .switch > label[for="btn5"] > span {
+    background-color: #356cb1;
+    transition: all 0.5s;
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 1023px) {
+    .slider {
+      max-width: 25rem;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    .slider-inner {
+      max-width: 25rem;
+    }
+    .slides {
+      margin-left: 4.5em;
+      border-radius: 5%;
+    }
+    .slides img {
+      max-width: 23em;
+      border-radius: 5%;
+    }
+    .slides img:nth-child(2) {
+      max-height: 11.063em;
+      margin-top: 6em;
+      margin-left: 0.125em;
+    }
+
+    .slides img:nth-child(4) {
+      max-height: 18em;
+      margin-top: 2.5em;
+      margin-left: 0.1em;
+    }
+
+    .slides img:nth-child(5) {
+      max-height: 13em;
+      margin-top: 5em;
+      margin-left: 0.1em;
+    }
+
+    .underslides {
+      flex-direction: column-reverse;
+    }
+    .description {
+      text-align: center;
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+    }
+    .switch {
+      margin-right: 0;
+      margin-top: 0.5em;
+      padding-bottom: 0;
+    }
+    .text {
+      margin-left: 0;
+      text-align: center;
+    }
+    .
+    #btn1:checked~.slider-inner .slides {
+      transform: translate(0);
+    }
+    #btn2:checked~.slider-inner .slides {
+      transform: translate(-41.8em);
+      border-radius: 5%;
+    }
+    #btn3:checked~.slider-inner .slides {
+      transform: translate(-83em);
+    }
+    #btn4:checked~.slider-inner .slides {
+      transform: translate(-124.7em);
+    }
+    #btn5:checked~.slider-inner .slides {
+      transform: translate(-169.5em);
+    }
+  }
