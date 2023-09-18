@@ -147,6 +147,26 @@ h1 {
     height: 1em;
     width: 1em;
   }
+  #btn1:checked:hover~ .underslides > .switch > label[for="btn1"] > span {
+    background-color: #356cb1;
+    transition: all 0.5s;
+  }
+  #btn2:checked:hover~ .underslides > .switch > label[for="btn2"] > span {
+    background-color: #356cb1;
+    transition: all 0.5s;
+  }
+  #btn3:checked:hover~ .underslides > .switch > label[for="btn3"] > span {
+    background-color: #356cb1;
+    transition: all 0.5s;
+  }
+  #btn4:checked:hover~ .underslides > .switch > label[for="btn4"] > span {
+    background-color: #356cb1;
+    transition: all 0.5s;
+  }
+  #btn5:checked:hover~ .underslides > .switch > label[for="btn5"] > span {
+    background-color: #356cb1;
+    transition: all 0.5s;
+  }
 
   @media screen and (min-width: 500px) and (max-width: 1023px) {
     .slider {
@@ -185,15 +205,17 @@ h1 {
     }
 
     .underslides {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
     .description {
       text-align: center;
-      margin-top: 1em;
+      margin-top: 0.5em;
+      margin-bottom: 1em;
     }
     .switch {
       margin-right: 0;
       margin-top: 0.5em;
+      padding-bottom: 0;
     }
     .text {
       margin-left: 0;
